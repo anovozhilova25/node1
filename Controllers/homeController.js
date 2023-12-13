@@ -1,3 +1,3 @@
-exports.getIndex = function (request, response){
+exports.getIndex = function(request, response){
     response.send("Hello");
 };
