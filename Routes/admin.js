@@ -6,11 +6,11 @@ var urlencodeParser = bodyParser.urlencoded({ extended: false });
 const jsonParser = express.json();
 
 //Комментарий из ветки моделей
-router.ger('/',adminController.getArticleAll);
-router.ger('/:idArticle',adminController.getArticle);
-router.ger('/:addArticle',adminController.addArticle);
-router.ger('/:editArticle',adminController.editArticle);
-router.ger('/:deleteArticle',adminController.deleteArticle);
+router.get('/',adminController.getArticleAll);
+router.get('/:idArticle',adminController.getArticle);
+router.get('/:addArticle',adminController.addArticle);
+router.get('/:editArticle',adminController.editArticle);
+router.get('/:deleteArticle',adminController.deleteArticle);
 
 module.exports = router;
 

@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 var urlencodeParser = bodyParser.urlencoded({ extended: false });
 const jsonParser = express.json();
 
-router.ger('/',articleController.getArticleAll);
-router.ger('/:idArticle',articleController.getArticle);
+router.get('/',articleController.getArticleAll);
+router.get('/:idArticle',articleController.getArticle);
 
 module.exports = router;
