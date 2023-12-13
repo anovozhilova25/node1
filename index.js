@@ -8,7 +8,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true })); //Для принятия данных из формы. Обязательно!!!
 app.use(bodyParser.json());//Для принятия данных из формы. Обязательно!!!
 
-let index = require('./Routes/Index');
+let index = require('./Routes/Indexx');
 app.use('/', index);
 
 let article = require('./Routes/article');
