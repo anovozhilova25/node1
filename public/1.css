@@ -3,9 +3,10 @@ h2 {
 }
 
 body {
-    background-color: burlywood;
+    background-color: rgb(245, 199, 214);
 }
 
 form {
-    border: 10px groove rgb(113, 120, 246);
+    border: 10px groove rgb(216, 56, 248);
+    padding: 10px;
 }

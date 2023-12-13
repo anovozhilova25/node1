@@ -3,7 +3,7 @@ var router = express.Router();
 var bodyParser = require('body-parser');
 var urlencodeParser = bodyParser.urlencoded({ extended: false });
 const jsonParser = express.json();
-const homeController = require("../controllers/homeController.js");
+const homeController = require("../Controllers/homeController.js");
 
 router.get('/',homeController.getIndex);
 
