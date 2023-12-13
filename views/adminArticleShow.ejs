@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="/1.css" type="text/css">
 </head>
 <body>
-    <% data[0].titleArticle %>
-        <p>
-            <%= data[0].textArticle %>
-        </p>
+    <%= data[0].titleArticle %>
+    <p>
+        <%= data[0].textArticle %>
+    </p>
     <div class="form">
         <h2>Изменить статью</h2>
 
-        <form action="http://localhost:3000/admin/editArticle %>" method="post">
+        <form action="http://localhost:3000/admin/editArticle>" method="post">
             <label for="titleArticle">Название статьи</label>
-            <input type="text" name="titleArticle" id="titleArticle" required>
+            <input type="text" name="titleArticle" id="titleArticle" required value = "<%= data.[0].titleArticle %>">
             <p>
                 <label for="textArticle">Текст статьи</label>
                 <textarea rows="10" cols="30" id="textArticle"><%= data[0].textArticle %></textarea>
