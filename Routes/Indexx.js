@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 var urlencodeParser = bodyParser.urlencoded({ extended: false });
 const jsonParser = express.json();
 const homeController = require("../Controllers/homeController.js");
+//const { route } = require('./admin');
 
 router.get('/',homeController.getIndex);
 

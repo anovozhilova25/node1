@@ -28,6 +28,7 @@
             <button type="submit" id="deleteArticle">Удалить статью</button>
             <p><a href='http://localhost:3000/admin/'>Вернуться к списку статей</a></p>
         </form>
+    </div>
         <script>
             document.querySelector("#sendArticle").onclick=function()
             {
@@ -49,8 +50,25 @@
                 .catch(response => alert("error" + response));
             };
         </script>
-
-
-    </div>
+         <script>
+            document.querySelector("#deleteArticle").onclick=function()
+            {
+                event.preventDefault();
+                let article={
+                'idArticle':location.href.split("/").at(-1),
+                }
+                let promise=fetch( 'http://localhost:3000/admin/deleteArticle',{
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8'
+                },
+                body: JSON.stringify(article)
+                })
+                .then (response=> document.location="http://localhost:3000/admin/")
+                .catch((error) => {
+                console.log(error);
+                });
+            }
+            </script>
 </body>
 </html>
