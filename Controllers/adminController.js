@@ -1,4 +1,4 @@
-const Models = require("../models/adminModel.js");
+const Models = require("../Models/adminModel.js");
 
 exports.getArticleAll = async function(req, res){
     let m = await Models.getAll();
@@ -11,6 +11,7 @@ exports.getArticle = async function(req, res){
 };
 
 exports.addArticle = async function(req, res){
+    await Models.addOne(req.body);
     let m = await Models.getAll();
     res.render('adminArticles', {data:m});
 };

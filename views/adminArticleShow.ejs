@@ -16,7 +16,7 @@
 
         <form action="http://localhost:3000/admin/editArticle>" method="post">
             <label for="titleArticle">Название статьи</label>
-            <input type="text" name="titleArticle" id="titleArticle" required value = "<%= data.[0].titleArticle %>">
+            <input type="text" name="titleArticle" id="titleArticle" required value= "<%= data[0].titleArticle %>">
             <p>
                 <label for="textArticle">Текст статьи</label>
                 <textarea rows="10" cols="30" id="textArticle"><%= data[0].textArticle %></textarea>
