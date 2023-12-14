@@ -23,7 +23,8 @@ exports.editArticle = async function(req, res){
 };
 
 exports.deleteArticle = async function(req, res){
-    await Models.deleteOne();
+    const idArticle = req.body.idArticle;
+    await Models.deleteOne(idArticle);
     let m = await Models.getAll();
     res.render('adminArticles', {data:m});
 };
