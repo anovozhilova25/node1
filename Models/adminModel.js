@@ -1,4 +1,4 @@
-var connection = require("../mysql.js");
+const connection = require("../mysql.js");
 
 exports.getAll=async function(req,res){
     let arr=[];
