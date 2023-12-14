@@ -4,8 +4,6 @@ exports.getAll = async function(req, res){
     let arr = [];
     await connection.query("SELECT * FROM article")
     .then(data => {
-        console.log("data");
-        console.log(data);
         for (let i=0;i<data[0].length;i++)
         {
             arr[i] = data[0][i];
@@ -14,8 +12,6 @@ exports.getAll = async function(req, res){
     .catch(err => {
         console.log(err);
     });
-    console.log("arr");
-    console.log(arr);
     return arr;
 };
 
@@ -34,7 +30,7 @@ exports.getOne = async function(req, res){
         console.log(err);
     });
     return arr;
-};
+}
 
 exports.addOne = async function(req, res){
     let sql = "insert into article values('',?,?,?)";
@@ -45,7 +41,7 @@ exports.addOne = async function(req, res){
     .catch(err => {
         console.log(err);
     });
-};
+}
 
 exports.editOne = async function(req, res){
     let arr = [];
@@ -62,7 +58,7 @@ exports.editOne = async function(req, res){
         console.log("ERROR"+err);
     });
     return arr;
-};
+}
 
 exports.deleteOne = async function(req, res){
     console.log("model del");
