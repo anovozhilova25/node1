@@ -67,8 +67,6 @@ exports.deleteOne = async function(req, res){
     filter = [req];
     await connection.query(sql, filter)
     .then(response => {
-    })
-    .catch(err => {
         console.log("ok");
     });
 };

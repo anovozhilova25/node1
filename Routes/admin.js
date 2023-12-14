@@ -1,5 +1,5 @@
 var express = require('express');
-const adminController = require("../controllers/adminController.js");
+const adminController = require("../Controllers/adminController.js");
 var router = express.Router();
 var bodyParser = require('body-parser');
 var urlencodeParser = bodyParser.urlencoded({ extended: false });
