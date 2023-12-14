@@ -20,7 +20,6 @@ exports.editArticle = async function(req, res){
     res.render('adminArticleShow', {data:m});
 };
 exports.deleteArticle = async function(req, res){ 
-    // Предполагается, что idArticle передается в запросе
     const idArticle = req.body.idArticle;
     await Models.deleteOne(idArticle); 
     let m=await Models.getAll();
