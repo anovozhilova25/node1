@@ -1,5 +1,5 @@
 const express = require('express');
-const newsController = require('../controllers/newsController.js');
+const newsController = require('../Controllers/newsController');
 
 const router = express.Router();
 var bodyParser = require('body-parser'); 
