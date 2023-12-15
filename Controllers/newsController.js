@@ -8,5 +8,5 @@ exports.getNewsAll = async (req, res) => {
 exports.getNews = async (req, res) => {
     const newsId = req.params.idNews;
     const news = await NewsModel.getNewsById(newsId);
-    res.render('newsDetail', { news });
+    res.render('newsContent', { news });
 };
