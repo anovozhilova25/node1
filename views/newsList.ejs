@@ -6,13 +6,11 @@
 </head>
 <body>
     <h2>Список новостей</h2>
-    <ul>
         <% newsList.forEach(news => { %>
             <li>
-                <a href="/news/<%= news.idNews %>"><%= news.titleNews %></a>
+                <a href="http://localhost:3000/news/<%= news.idNews %>"><%= news.titleNews %></a>
                 <p><%= news.descriptionNews %></p>
             </li>
         <% }); %>
-    </ul>
 </body>
 </html>
