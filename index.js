@@ -17,4 +17,7 @@ app.use('/article', article);
 let admin = require('./Routes/admin');
 app.use('/admin', admin);
 
+let news = require('./Routes/news');
+app.use('/news', news);
+
 app.listen(3000);
