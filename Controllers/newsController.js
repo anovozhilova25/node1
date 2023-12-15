@@ -1,4 +1,4 @@
-const NewsModel = require('../models/newsModel');
+const NewsModel = require('../Models/newsModel');
 
 exports.getNewsList = async (req, res) => {
     const newsList = await NewsModel.getAllNews();
